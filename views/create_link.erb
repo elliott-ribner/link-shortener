@@ -11,50 +11,14 @@
 	function htmlConvert() {
 		var url = document.getElementById("url").value;
 		var title = document.getElementById("title").value;
-		htmlOutput = "<a href='" + url + "'/>" + title + "</a>"
+		htmlOutput = "&lt;a href='" + url + "'/&gt" + title + "&lt/a&gt;"
 		document.getElementById("hyper-link").innerHTML = htmlOutput;
 	}
 	</script>
-	<style type="text/css">
-	.lead {
-		padding: 10px;
-	}
-	.nav-tabs {
-		margin-top: 160px;
-		margin-bottom: none;
-		border-bottom: none;
-		
-	}
-	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-		background-color: #60D5AC ;
-		border: none;
 
-	}
-	.nav > li > a:hover {
-		background-color: #60D5AC;
-		border: none;
-
-	}
-	.nav-tabs > li > a {
-		background-color: #35D59D;
-		border: none;
-	}
-	.nav > li {
-		border: none;
-		margin-right: 8px;
-	}
-
-
-	</style>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class='container'>
-			<div class='navbar-brand'>
-				2-SHORT URL SHORTENER
-			</div>
-		</div>
-	</nav>
+
 	<div class='container'>
 		<div class='row'>
 			<div class='col-xs-1'></div>
@@ -74,8 +38,8 @@
 				<div class="col-sm-7">
 					<p class="lead">SAY GOODBYE TO THE LONG URL</p>
 					<p class='lead pull-right'>and hello to TOO $HORT</p>
-					<p class="lead">In a world of rediculously long urls, too short is here to help you. Reach your customers, followers, and friends with one short and clean link. Simply enter the destination URL and we will return a shorter link that will redirect to the original destination.</p>
-					<div class="col-sm-6">
+					<p class="lead">In a world of ridiculously long URLs, too short is here to help you. Reach your customers, followers, and friends with one short and clean link. Simply enter the destination URL and we will return a shorter link that will redirect to the original destination.</p>
+					<div class="col-md-6">
 						<form action="/create" method="post" >
 							<div class='form-group'>
 								<label>URL: </label>
@@ -99,6 +63,7 @@
 					<p class="lead">
 						Quickly create an html hyperlink below by inputting your desired link destination and text.
 					</p>
+					<div class="col-md-6">
 					<form>
 						<div class='form-group'>
 							<label>URL: </label>
@@ -107,11 +72,12 @@
 						<div class='form-group'>
 							<label>TEXT LABEL: </label>
 							<input id="title" class="form-control" type="text">
-						</div> 
+						</div>
 						<div class='form-group'>
 							<input type="button" class='btn btn-success text-center' value="CONVERT TO HTML" onclick="htmlConvert()">
 						</div>
 					</form>
+				</div>
 					<p id="hyper-link"></p>
 				</div>
 			</div>

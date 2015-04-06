@@ -11,6 +11,9 @@ def db_connection
   end
 end
 
+get "/" do
+  erb :create_link
+end
 #initial visit to page
 get "/create_link" do
   erb :create_link
@@ -20,21 +23,20 @@ end
 post "/create" do
   long_url = params[:long_url_name]
   short_url_partial = shorten_link ( long_url )
-  short_url = "http://localhost:4567/sl/" << short_url_partial
+  short_url = "https://tooshrt.herokuapp.com/s/" << short_url_partial
   erb :create_link , locals: { short_url: short_url }
 end
 
 def shorten_link long_url
-  partial_link_path = ('a'..'z').to_a.concat((0..9).to_a).sample(8).join
+  partial_link_path = ('a'..'z').to_a.concat((0..9).to_a).sample(5).join
   db_connection do |conn|
     conn.exec_params("INSERT INTO list_table (id, url) VALUES ($1, $2)", [ partial_link_path , long_url ])
-    #need to pass row count and long url here
     partial_link_path
   end
 end
 
 #visiting this page redirects to web page
-get "/sl/:short_link_input" do
+get "/s/:short_link_input" do
   short_url = params[:short_link_input]
   long_url = extend_link ( short_url )
   redirect "http://#{long_url}"

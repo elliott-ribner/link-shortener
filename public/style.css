@@ -1,25 +1,18 @@
-.navbar-default {
-	background-color: #006f48 !important;
-	border-color: #35D59D;
-	border: 30px;
-}
+@import url(http://fonts.googleapis.com/css?family=Cuprum);
+
+
 
 body {
-	background-color: #00AB6F;
+	background-color: #282828;
 }
 
-
-.navbar-brand {
-	color: #60D5AC !important;
-
-}
 .main-box {
 	margin-top: 0px;
 	background-color: #35D59D !important;
 	padding: 30px;
 	border-radius: 25px;
-/*	border-color: #FFA073 !important;
-*/	border-color: #60D5AC !important;
+	border-color: #FFA073 !important;
+	border-color: #35D59D !important;
 	border: 8px solid;
 }
 
@@ -27,8 +20,41 @@ p {
 	display: inline-block;
 	font-size: 16px;
 	padding:20px;
-	color: #006f48;
+	color: #333;
 }
 h3 {
 	color: #006f48;
 }
+
+.lead {
+		padding: 10px;
+	}
+	.nav-tabs {
+		margin-top: 160px;
+		margin-bottom: none;
+		border-bottom: none;
+
+	}
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+		background-color: #35D59D;
+		border: none;
+		color: #333;
+
+	}
+	.nav > li > a:hover {
+		background-color: #60D5AC;
+		border: none;
+
+	}
+	.nav-tabs > li > a {
+		background-color: #8ce8c8;
+		border: none;
+		font-family: 'Cuprum', sans-serif;
+		font-size: 20px;
+		color: #006f48;
+
+	}
+	.nav > li {
+		border: none;
+		margin-right: 8px;
+	}
