@@ -2,7 +2,7 @@ require 'sinatra'
 require 'pg'
 
 configure :development do
-  set :db_config, { dbname: "restaurants" }
+  set :db_config, { dbname: "list_table" }
 end
 
 configure :production do
